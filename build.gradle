@@ -31,7 +31,6 @@ task monkey << {
 }
 
 run {    
-    /* Can pass all the properties: */
     systemProperties System.getProperties()
 
     args System.getProperty("args").split()    
