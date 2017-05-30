@@ -30,8 +30,17 @@ task monkey << {
   }
 }
 
-run {    
-    systemProperties System.getProperties()
+run {
+    try {
+        systemProperties System.getProperties()
+	args System.getProperty("args").split()
+    } catch (Exception e) {
+        // Do nothing
+    }
+	
+}
 
-    args System.getProperty("args").split()    
+task demo(type: Exec) << {
+     // commandLine "gradle -q run -Dargs=\"30\""
+     commandLine "ls"
 }
