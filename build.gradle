@@ -35,7 +35,7 @@ run {
         systemProperties System.getProperties()
 	args System.getProperty("args").split()
     } catch (Exception e) {
-        // Do nothing
+        // println "Please add -Dargs=\"...\" even if it is empty"
     }
 	
 }

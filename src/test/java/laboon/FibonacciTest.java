@@ -7,7 +7,7 @@ public class FibonacciTest {
 
     @Test
     public void testFibonacci0() {
-	assertEquals(Fibonacci.fibonacci(0), 0);
+    	assertEquals(Fibonacci.fibonacci(0), 10);
     }
 
     
